@@ -1,0 +1,323 @@
+/*
+  ╔══════════════════════════════════════════════════════╗
+  ║           Windows 7 Aero Glass — win7.css            ║
+  ╠══════════════════════════════════════════════════════╣
+  ║  Usage: <link rel="stylesheet" href="win7.css">      ║
+  ║                                                      ║
+  ║  Window markup:                                      ║
+  ║    <div class="win7">                                ║
+  ║      <div class="win7-titlebar">                     ║
+  ║        <img class="win7-icon" src="icon.png">        ║
+  ║        <span class="win7-title">My Window</span>     ║
+  ║        <div class="win7-buttons">                    ║
+  ║          <button class="win7-min"></button>          ║
+  ║          <button class="win7-max"></button>          ║
+  ║          <button class="win7-close"></button>        ║
+  ║        </div>                                        ║
+  ║      </div>                                          ║
+  ║      <div class="win7-content">                      ║
+  ║        your content here                             ║
+  ║      </div>                                          ║
+  ║    </div>                                            ║
+  ║                                                      ║
+  ║  Add class "inactive" to .win7 for unfocused look    ║
+  ╚══════════════════════════════════════════════════════╝
+
+  ✏️ QUICK CUSTOMIZATION:
+     Window size:     .win7          → width, min-height
+     Titlebar height: .win7-titlebar → height
+     Frame thickness: .win7          → padding-left, padding-right, padding-bottom
+     Button height:   .win7-min, .win7-max, .win7-close → height
+     Title font:      .win7-title    → font-size
+     Content padding: .win7-content  → padding
+*/
+
+
+/* ════════════════════════════════════════
+   WINDOW SHELL
+════════════════════════════════════════ */
+.win7 {
+  width:          100px;
+  min-height:     0px;
+  height:         fit-content;
+  border-radius:  8px 8px 4px 4px;
+  display:        flex;
+  flex-direction: column;
+  position:       relative;
+  overflow:       hidden;
+
+  /* Aero glass base — tinted blue-white, mostly transparent */
+  background: linear-gradient(180deg,
+    rgba(180, 215, 255, 0.20) 0%,
+    rgba(160, 200, 250, 0.20) 40%,
+    rgba(140, 185, 245, 0.25) 75%,
+    rgba(120, 170, 240, 0.20) 100%
+  );
+
+  backdrop-filter: blur(8px) saturate(1.4);
+  -webkit-backdrop-filter: blur(8px) saturate(1.4);
+
+  padding-left:   4px;
+  padding-right:  4px;
+  padding-bottom: 4px;
+  padding-top:    0;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  
+  box-shadow:
+    0 0 0 1px rgba(25, 65, 130, 0.55),
+    0 12px 45px rgba(0, 15, 60, 0.55),
+    0 4px 12px rgba(0, 0, 0, 0.40),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 1px 0 0 rgba(255, 255, 255, 0.55),
+    inset -1px 0 0 rgba(255, 255, 255, 0.55);
+}
+
+
+/* Top shine — bright at top, fades out at 75% */
+.win7::before {
+  content:        '';
+  position:       absolute;
+  top: 0; left: 0; right: 0;
+  height:         100%;
+  background: linear-gradient(180deg,
+    rgba(255, 255, 255, 0.00) 0%,
+    rgba(255, 255, 255, 0.60) 32%,
+    rgba(255, 255, 255, 0.05) 33%,
+    rgba(255, 255, 255, 0.20) 100%
+  );
+  pointer-events: none;
+  z-index:        0;
+  border-radius:  8px 8px 0 0;
+}
+
+/* Corner highlight blobs */
+.win7::after {
+  content:        '';
+  position:       absolute;
+  top: 0; left: 0; right: 0;
+  height:         36px;
+  background:
+    radial-gradient(ellipse 50px 50px at 0% 0%, rgba(255,255,255,0.50) 0%, transparent 100%),
+    radial-gradient(ellipse 50px 50px at 100% 0%, rgba(255,255,255,0.50) 0%, transparent 100%);
+  pointer-events: none;
+  z-index:        1;
+}
+
+
+/* ════════════════════════════════════════
+   TITLE BAR
+════════════════════════════════════════ */
+.win7-titlebar {
+  height:      32px;
+  flex-shrink: 0;
+  display:     flex;
+  align-items: center;
+  padding:     0 0 0 8px;
+  gap:         6px;
+  cursor:      default;
+  user-select: none;
+  position:    relative;
+  z-index:     2;
+
+  margin-left:  -4px;
+  margin-right: -4px;
+
+  background-color: rgba(0,0,0,0);
+}
+
+.win7-titlebar::before {
+  content:        '';
+  position:       absolute;
+  top: 0; left: 0; right: 0;
+  height:         1px;
+  background:     rgba(255, 255, 255, 0.92);
+  pointer-events: none;
+}
+
+
+/* ════════════════════════════════════════
+   ICON
+════════════════════════════════════════ */
+.win7-icon {
+  width:       20px;
+  height:      20px;
+  object-fit:  contain;
+  flex-shrink: 0;
+  filter:      drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.70));
+}
+
+
+/* ════════════════════════════════════════
+   TITLE TEXT
+════════════════════════════════════════ */
+.win7-title {
+  flex:           1;
+  font-family:    'Segoe UI', Tahoma, Geneva, sans-serif;
+  font-size:      14px;
+  font-weight:    400;
+  color:          #ffffff;
+  text-shadow:
+    0 1px 0 rgba(0, 30, 100, 0.90),
+    0 2px 6px rgba(0, 20, 80, 0.80),
+    1px 1px 3px rgba(0, 0, 0, 0.60);
+  letter-spacing: 0.01em;
+  overflow:       hidden;
+  white-space:    nowrap;
+  text-overflow:  ellipsis;
+}
+
+
+/* ════════════════════════════════════════
+   BUTTONS WRAPPER
+════════════════════════════════════════ */
+.win7-buttons {
+  display:        flex;
+  gap:            1px;
+  margin-left:    auto;
+  align-self:     flex-start;
+  padding-top:    0;
+  padding-right:  6px;
+  flex-shrink:    0;
+}
+
+
+/* ════════════════════════════════════════
+   MIN + MAX BUTTONS
+════════════════════════════════════════ */
+.win7-min{
+  width:           42px;
+  height:          24px;
+  border-radius:   0 0 0px 6px;
+  border-top:      none;
+  border-left:     1px solid rgba(15, 15, 15, 0.75);
+  border-right:    1px solid rgba(15, 15, 15, 0.75);
+  border-bottom:   1px solid rgba(15, 15, 15, 0.75);
+  cursor:          pointer;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  transition:      filter 80ms linear;
+  
+  background: linear-gradient(180deg,
+    rgba(220, 235, 255, 0.62) 0%,
+    rgba(185, 210, 252, 0.50) 45%,
+    rgba(120, 120, 120, 0.40) 55%,
+    rgba(168, 198, 246, 0.54) 100%
+  );
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+
+.win7-max {
+  width:           42px;
+  height:          24px;
+  border-radius:   0 0 0px 0px;
+  border-top:      none;
+  border-left:     1px solid rgba(15, 15, 15, 0.75);
+  border-right:    1px solid rgba(15, 15, 15, 0.75);
+  border-bottom:   1px solid rgba(15, 15, 15, 0.75);
+  cursor:          pointer;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  transition:      filter 80ms linear;
+  
+  background: linear-gradient(180deg,
+    rgba(220, 235, 255, 0.62) 0%,
+    rgba(185, 210, 252, 0.50) 45%,
+    rgba(120, 120, 120, 0.40) 55%,
+    rgba(168, 198, 246, 0.54) 100%
+  );
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+
+.win7-min:hover,
+.win7-max:hover  { filter: brightness(1.18); }
+.win7-min:active,
+.win7-max:active { filter: brightness(0.88); }
+
+.win7-min::after {
+  content:    '';
+  display:    block;
+  width:      12px;
+  height:     3px;
+  background: #ffffff;
+  box-shadow: 0 0 0 black, 0 0px 3px black;
+  margin-top: 6px;
+}
+
+.win7-max::after {
+  content:    '';
+  display:    block;
+  width:      10px;
+  height:     8px;
+  border:     2px solid #ffffff;
+  box-shadow: 0 0 0 black, 0 0px 3px black;
+}
+
+
+/* ════════════════════════════════════════
+   CLOSE BUTTON
+════════════════════════════════════════ */
+.win7-close {
+  width:           62px;
+  height:          24px;
+  border-radius:   0 0 6px 0px;
+  border-top:      none;
+  border-left:     1px solid rgba(120, 60, 40, 0.80);
+  border-right:    1px solid rgba(120, 60, 40, 0.80);
+  border-bottom:   1px solid rgba(120, 50, 30, 0.85);
+  cursor:          pointer;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  transition:      filter 80ms linear;
+
+  background: linear-gradient(180deg,
+    rgb(232, 150, 150) 0%,
+    rgb(215,  150, 150) 45%,
+    rgb(200,  20,  0) 55%,
+    rgb(225, 125, 134) 100%
+  );
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+
+.win7-close:hover  { filter: brightness(1.15); }
+.win7-close:active { filter: brightness(0.88); }
+
+.win7-close::after {
+  content:     '✕';
+  font-size:   13px;
+  font-weight: 900;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1;
+  color:       #ffffff;
+  text-shadow: 
+    0 0 1px black, 
+    0 0 3px black;
+}
+
+.win7.inactive .win7-min,
+.win7.inactive .win7-max,
+.win7.inactive .win7-close {
+  opacity: 0.60;
+  filter:  saturate(0.20);
+}
+
+
+/* ════════════════════════════════════════
+   CONTENT AREA
+════════════════════════════════════════ */
+.win7-content {
+  flex:          0 0 auto;
+  padding:       16px;
+  background:    rgba(255, 255, 255, 0.75);
+  overflow:      auto;
+  border:        1px solid rgba(100, 140, 200, 0.25);
+  border-radius: 0 0 2px 2px;
+  position:      relative;
+  z-index:       2;
+}
