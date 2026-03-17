@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brian's site!</title>
+  <link rel="stylesheet" href="win7v11.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&amp;display=swap" rel="stylesheet">
+  <style>
+		body {
+			margin: 20;
+			height: 90vh;
+			gap: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-image: url("https://bryian1125.neocities.org/ISSInOrbit.jpg");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			background-position: center;
+			
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		
+	    .highlight {
+            color: rgba(5, 255, 155, 1) ; /* Or any other color name or hex code */
+        }
+		
+	    @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-6px); }
+        }
+    
+        .float {
+            animation: float 2s ease-in-out infinite;
+        }
+    
+        button {
+            transition: transform 0.4s ease;
+        }
+
+
+        button:hover img {
+            transform: scale(1.1);
+            transition: transform 0.15s ease;
+        }
+
+        button:active img {
+            transform: scale(0.95);
+            transition: transform 0.1s ease;
+        }
+  </style>
+</head>
+
+<body>
+<div style = "display: flex; flex-direction: row; gap: 10px; height:450px; justify-content: center; align-items: center;">
+  <div style = "display: flex; flex-direction: column; gap: 10px; height:450px; justify-content: center;">
+  
+    <!-- Profile panel -->
+    <div class="win7" style = " width: 450px; height: 180px;">
+      <div class="win7-titlebar">
+        <img class="win7-icon" src="https://bryian1125.neocities.org/BlueProfile.png" alt="">
+        <span class="win7-title">Profile</span>
+        <div class="win7-buttons">
+          <button class="win7-min"></button>
+          <button class="win7-max"></button>
+          <button class="win7-close"></button>
+        </div>
+      </div>
+      <div class="win7-content" style="background: url('https://bryian1125.neocities.org/ESASNAP.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: flex-start;">
+        <img src="https://bryian1125.neocities.org/BryianProfile.png" style="width: auto; height: auto; max-height: 110px;">
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <h1 style="font-size: 40px; font-weight: bold; color: white; margin: 0; white-space: nowrap; text-shadow: 0px 0px 6px black;">Brian Azarraga</h1>
+          <h2 style="font-size: 16px; font-weight: bold; color: white; margin: 0; text-shadow: 0px 0px 6px black; padding-left: 3px;">Iloilo, Philippines</h2>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Info panel -->
+    <div class = "win7" style = "width: 450px; height: 200;">
+      <div class="win7-titlebar">
+        <img class="win7-icon" src="https://bryian1125.neocities.org/Info.png" alt="">
+        <span class="win7-title">Info</span>
+        <div class="win7-buttons">
+          <button class="win7-min"></button>
+          <button class="win7-max"></button>
+          <button class="win7-close"></button>
+        </div>
+      </div>
+      <div class="win7-content" style = "background: linear-gradient(to bottom, rgba(0, 25, 35, 1), rgba(0, 35, 25, 1));">
+        <div style = "display: flex; flex-direction: row; gap: 10px;">
+          <div style="display: flex; align-items: center; padding-right: 8px; color: #4a6a7a; font-family: 'JetBrains Mono', monospace; font-size: 15px; text-align: right; user-select: none; border-right: 1px solid #1e3a4a;">
+            1<br>2<br>3<br>4<br>5<br>6
+          </div>
+          <p style = "font-size: 15px ; font-family: 'JetBrains Mono', monospace; font-weight: 500; color: rgba(220,220,200,1); text-align: left;">Engineering student with diverse experience in <span class = "highlight">web development</span>, <span class = "highlight">GIS systems</span>, <span class = "highlight">remote sensing</span>, <span class = "highlight">game development</span>, and <span class = "highlight">AI</span>.<br> <br> When i'm not coding, im probably playing with   satellite data</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Side panel -->
+  <div class = "win7" style = "width: 650px; height: 412px;">
+      <div class="win7-titlebar">
+        <img class="win7-icon" src="https://bryian1125.neocities.org/cmd.png" alt="">
+        <span class="win7-title">About me</span>
+        <div class="win7-buttons">
+          <button class="win7-min"></button>
+          <button class="win7-max"></button>
+          <button class="win7-close"></button>
+        </div>
+      </div>
+      <div class="win7-content" style = "background-color: black;">
+
+        <p style="font-size: 10px; font-family: 'JetBrains Mono', 'Courier New', Courier, monospace; font-weight: 500; color: rgba(200,200,240,1);" >root@node01:~/BRIANPORTFOLIO_V1.0.2$ ./run<br>------------------------------------------------------------------------------------------------------</p>
+        <pre style="font-size: 10px; font-family: 'JetBrains Mono', 'Courier New', Courier, monospace; font-weight: 500; color: rgba(200,200,240,1);text-align: left;line-height: 1;letter-spacing: 0;white-space: pre;">oooo                  oooo  oooo                     .   oooo                                     .o. 
+       `888                  `888  `888                   .o8   `888                                     888 
+        888 .oo.    .ooooo.   888   888   .ooooo.       .o888oo  888 .oo.    .ooooo.  oooo d8b  .ooooo.  888 
+        888P"Y88b  d88' `88b  888   888  d88' `88b        888    888P"Y88b  d88' `88b `888""8P d88' `88b Y8P 
+        888   888  888ooo888  888   888  888   888        888    888   888  888ooo888  888     888ooo888 `8' 
+        888   888  888    .o  888   888  888   888        888 .  888   888  888    .o  888     888    .o .o. 
+       o888o o888o `Y8bod8P' o888o o888o `Y8bod8P'        "888" o888o o888o `Y8bod8P' d888b    `Y8bod8P' Y8P 
+                                                                                         </pre>
+        <p style="font-size: 10px; font-family: 'JetBrains Mono', 'Courier New', Courier, monospace; font-weight: 500; color: rgba(200,200,240,1);">------------------------------------------------------------------------------------------------------<br><br> <span style="font-weight: bold">Education:</span> <br> BS Software Engineering <br>>>>[2025-Now] <br>Capiz National High School - Science Technology & Engineering <br>>>>[2019-2025] <br><br> <span style="font-weight: bold">Work History:</span><br> Miracle Studios - UI/UX Designer <br> >>>[2025-Now]<br><br><span style="font-weight: bold">Languages:</span><br>[TypeScript], [Node.js], [CSS], [Lua], [Python], [Java], [Cpp]<p>
+        
+      </div>
+    </div>
+    
+</div>
+  
+  <div style = "display: flex; flex-direction: horizontal; padding: 10;">
+    <button style="width: 90px; height: 90px; background: none; border: none; padding: 0; cursor: pointer;">
+      <div class="float">
+        <img src="https://bryian1125.neocities.org/InfoIcon.png" style="width: 100%; height: 100%; object-fit: contain; ">
+      </div>
+    </button>
+  
+    <button style="width: 90px; height: 90px; background: none; border: none; padding: 0; cursor: pointer;">
+      <div class="float" style = "animation-delay: 0.4s;">
+        <img src="https://bryian1125.neocities.org/ProjectsIcon.png" style="width: 100%; height: 100%; object-fit: contain;">
+      </div>
+    </button>
+  
+    <button style="width: 90px; height: 90px; background: none; border: none; padding: 0; cursor: pointer;">
+      <div class="float" style = "animation-delay: 0.8s;">
+        <img src="https://bryian1125.neocities.org/GamesIcon.png" style="width: 100%; height: 100%; object-fit: contain;">
+      </div>
+    </button>
+  
+    <a href = "https://github.com/Bryian1125" target="_blank" rel="noopener noreferrer">
+      <button style="width: 90px; height: 90px; background: none; border: none; padding: 0; cursor: pointer;">
+        <div class="float" style = "animation-delay: 1.2s;">
+          <img src="https://bryian1125.neocities.org/GithubIcon.png" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+      </button>
+    </a>
+  </div>
+
+</body>
+</html>
