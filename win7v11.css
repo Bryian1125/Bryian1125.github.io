@@ -1,37 +1,3 @@
-/*
-  ╔══════════════════════════════════════════════════════╗
-  ║           Windows 7 Aero Glass — win7.css            ║
-  ╠══════════════════════════════════════════════════════╣
-  ║  Usage: <link rel="stylesheet" href="win7.css">      ║
-  ║                                                      ║
-  ║  Window markup:                                      ║
-  ║    <div class="win7">                                ║
-  ║      <div class="win7-titlebar">                     ║
-  ║        <img class="win7-icon" src="icon.png">        ║
-  ║        <span class="win7-title">My Window</span>     ║
-  ║        <div class="win7-buttons">                    ║
-  ║          <button class="win7-min"></button>          ║
-  ║          <button class="win7-max"></button>          ║
-  ║          <button class="win7-close"></button>        ║
-  ║        </div>                                        ║
-  ║      </div>                                          ║
-  ║      <div class="win7-content">                      ║
-  ║        your content here                             ║
-  ║      </div>                                          ║
-  ║    </div>                                            ║
-  ║                                                      ║
-  ║  Add class "inactive" to .win7 for unfocused look    ║
-  ╚══════════════════════════════════════════════════════╝
-
-  ✏️ QUICK CUSTOMIZATION:
-     Window size:     .win7          → width, min-height
-     Titlebar height: .win7-titlebar → height
-     Frame thickness: .win7          → padding-left, padding-right, padding-bottom
-     Button height:   .win7-min, .win7-max, .win7-close → height
-     Title font:      .win7-title    → font-size
-     Content padding: .win7-content  → padding
-*/
-
 
 /* ════════════════════════════════════════
    WINDOW SHELL
