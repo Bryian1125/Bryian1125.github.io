@@ -9,7 +9,7 @@
 
   <style>
 		body {
-			margin: 20;
+			/*margin: 20;*/
 			height: 90vh;
 			gap: 20px;
 			display: flex;
@@ -32,13 +32,13 @@
 		
     /*Window animations*/
     @keyframes windowUp {
-      0% {transform: translateY(0); opacity: 0;}
+      0% {transform: translateY(0); opacity: 1;} /*change to 0*/
       100% {transform: translateY(400); opacity: 1;}
     }
 
     @keyframes windowDown {
       0% {transform: translateY(400); opacity: 1;}
-      100% {transform: translateY(0); opacity: 0;}
+      100% {transform: translateY(0); opacity: 1;} /*change to 0*/
     }
     
     /*Button animations*/
@@ -70,90 +70,109 @@
 </head>
 
 <body>
-<div style = "display: flex; flex-direction: row; gap: 10px; height:450px; justify-content: center; align-items: center;">
-  <div style = "display: flex; flex-direction: column; gap: 10px; height:450px; justify-content: center;">
-  
-    <!-- Profile panel -->
-    <div class="win7" id = "profilePanel" style = " width: 450px; height: 180px; opacity: 0;">
-      <div class="win7-titlebar">
-        <img class="win7-icon" src="Images/BlueProfile.png">
-        <span class="win7-title">Profile</span>
-        <div class="win7-buttons">
-          <button class="win7-min"></button>
-          <button class="win7-max"></button>
-          <button class="win7-close"></button>
-        </div>
-      </div>
-      <div class="win7-content" style="background: url('Images/ESASNAP.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: flex-start;">
-        <img src="Images/BryianProfile.png" style="width: auto; height: auto; max-height: 110px;">
-        <div style="display: flex; flex-direction: column; gap: 6px;">
-          <h1 style="font-size: 40px; font-weight: bold; color: white; margin: 0; white-space: nowrap; text-shadow: 0px 0px 6px black;">Brian Azarraga</h1>
-          <h2 style="font-size: 16px; font-weight: bold; color: white; margin: 0; text-shadow: 0px 0px 6px black; padding-left: 3px;">Iloilo, Philippines</h2>
-        </div>
-      </div>
-    </div>
-  
-    <!-- Info panel -->
-    <div class = "win7" id = "infoPanel" style = "width: 450px; height: 200; opacity: 0;">
-      <div class="win7-titlebar">
-        <img class="win7-icon" src="Images/Info.png" alt="">
-        <span class="win7-title">Info</span>
-        <div class="win7-buttons">
-          <button class="win7-min"></button>
-          <button class="win7-max"></button>
-          <button class="win7-close"></button>
-        </div>
-      </div>
-      <div class="win7-content" style = "background: linear-gradient(to bottom, rgba(0, 25, 35, 1), rgba(0, 35, 25, 1));">
-        <div style = "display: flex; flex-direction: row; gap: 10px;">
-          <div style="display: flex; align-items: center; padding-right: 8px; color: #4a6a7a; font-family: 'JetBrains Mono', monospace; font-size: 15px; text-align: right; user-select: none; border-right: 1px solid #1e3a4a;">
-            1<br>2<br>3<br>4<br>5<br>6
+  <!-- display must be flex to activate-->
+  <div id = "ProfilePage" style = "display: flex; flex-direction: row; gap: 10px; height:450px; justify-content: center; align-items: center;"> 
+    <div style = "display: flex; flex-direction: column; gap: 10px; height:450px; justify-content: center;">
+      <!-- Profile panel -->
+      <div class="win7" id = "profilePanel" style = " width: 450px; height: 180px;">
+        <div class="win7-titlebar">
+          <img class="win7-icon" src="Images/BlueProfile.png">
+          <span class="win7-title">Profile</span>
+          <div class="win7-buttons">
+            <button class="win7-min"></button>
+            <button class="win7-max"></button>
+            <button class="win7-close"></button>
           </div>
-          <p style = "font-size: 15px ; font-family: 'JetBrains Mono', monospace; font-weight: 500; color: rgba(220,220,200,1); text-align: left;">Engineering student with diverse experience in <span class = "highlight">web development</span>, <span class = "highlight">GIS systems</span>, <span class = "highlight">remote sensing</span>, <span class = "highlight">game development</span>, and <span class = "highlight">AI</span>.<br> <br> When i'm not coding, im probably playing with   satellite data</p>
+        </div>
+        <div class="win7-content" style="background: url('Images/ESASNAP.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: flex-start;">
+          <img src="Images/BryianProfile.png" style="width: auto; height: auto; max-height: 110px;">
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <h1 style="font-size: 40px; font-weight: bold; color: white; margin: 0; white-space: nowrap; text-shadow: 0px 0px 6px black;">Brian Azarraga</h1>
+            <h2 style="font-size: 16px; font-weight: bold; color: white; margin: 0; text-shadow: 0px 0px 6px black; padding-left: 3px;">Iloilo, Philippines</h2>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Info panel -->
+      <div class = "win7" id = "infoPanel" style = "width: 450px; height: 200;">
+        <div class="win7-titlebar">
+          <img class="win7-icon" src="Images/Info.png" alt="">
+          <span class="win7-title">Info</span>
+          <div class="win7-buttons">
+            <button class="win7-min"></button>
+            <button class="win7-max"></button>
+            <button class="win7-close"></button>
+          </div>
+        </div>
+        <div class="win7-content" style = "background: linear-gradient(to bottom, rgba(0, 25, 35, 1), rgba(0, 35, 25, 1));">
+          <div style = "display: flex; flex-direction: row; gap: 10px;">
+            <div style="display: flex; align-items: center; padding-right: 8px; color: #4a6a7a; font-family: 'JetBrains Mono', monospace; font-size: 15px; text-align: right; user-select: none; border-right: 1px solid #1e3a4a;">
+              1<br>2<br>3<br>4<br>5<br>6
+            </div>
+            <p style = "font-size: 15px ; font-family: 'JetBrains Mono', monospace; font-weight: 500; color: rgba(220,220,200,1); text-align: left;">Engineering student with diverse experience in <span class = "highlight">web development</span>, <span class = "highlight">GIS systems</span>, <span class = "highlight">remote sensing</span>, <span class = "highlight">game development</span>, and <span class = "highlight">AI</span>.<br> <br> When i'm not coding, im probably playing with   satellite data</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  
-  <!-- Side panel -->
-  <div class = "win7" id = "sidePanel" style = "width: 620px; height: 412px; opacity: 0;">
-      <div class="win7-titlebar">
-        <img class="win7-icon" src="Images/cmd.png" alt="">
-        <span class="win7-title">About me</span>
-        <div class="win7-buttons">
-          <button class="win7-min"></button>
-          <button class="win7-max"></button>
-          <button class="win7-close"></button>
+    
+    <!-- Side panel -->
+    <div class = "win7" id = "sidePanel" style = "width: 620px; height: 395px;">
+        <div class="win7-titlebar">
+          <img class="win7-icon" src="Images/cmd.png" alt="">
+          <span class="win7-title">About me</span>
+          <div class="win7-buttons">
+            <button class="win7-min"></button>
+            <button class="win7-max"></button>
+            <button class="win7-close"></button>
+          </div>
         </div>
-      </div>
-      <div class="win7-content" style = "background-color: black;">
+        <div class="win7-content" style = "background-color: black;">
 
-        <p style="font-size: 10px; font-family: 'JetBrains Mono', 'Courier New', Courier, monospace; font-weight: 500; color: rgba(200,200,240,1);" >root@node01:~/BRIANPORTFOLIO_V1.0.2$ ./run<br>-------------------------------------------------------------------------------------------------</p>
-        <pre style="font-size: 9px; font-family: 'JetBrains Mono', 'Courier New', Courier, monospace; font-weight: 500; color: rgba(200,200,240,1);text-align: left;line-height: 1;letter-spacing: 0;white-space: pre;">oooo                  oooo  oooo                     .   oooo                                     .o. 
+          <p style="font-size: 10px; font-family: 'JetBrains Mono', 'Courier New', Courier, monospace; font-weight: 500; color: rgba(200,200,240,1);" >root@node01:~/BRIANPORTFOLIO_V1.0.2$ ./run<br>-------------------------------------------------------------------------------------------------</p>
+          <pre style="font-size: 9px; font-family: 'JetBrains Mono', 'Courier New', Courier, monospace; font-weight: 500; color: rgba(200,200,240,1);text-align: left;line-height: 1;letter-spacing: 0;white-space: pre;">oooo                  oooo  oooo                     .   oooo                                     .o. 
 `888                  `888  `888                   .o8   `888                                     888
  888 .oo.    .ooooo.   888   888   .ooooo.       .o888oo  888 .oo.    .ooooo.  oooo d8b  .ooooo.  888 
  888P"Y88b  d88' `88b  888   888  d88' `88b        888    888P"Y88b  d88' `88b `888""8P d88' `88b Y8P 
  888   888  888ooo888  888   888  888   888        888    888   888  888ooo888  888     888ooo888 `8' 
  888   888  888    .o  888   888  888   888        888 .  888   888  888    .o  888     888    .o .o. 
 o888o o888o `Y8bod8P' o888o o888o `Y8bod8P'        "888" o888o o888o `Y8bod8P' d888b    `Y8bod8P' Y8P 
-                                                                                         </pre>
-        <p style="font-size: 10px; font-family: 'JetBrains Mono', 'Courier New', Courier, monospace; font-weight: 500; color: rgba(200,200,240,1);">-------------------------------------------------------------------------------------------------
-            <br><br> <span style="font-weight: bold">Education:</span> <br> 
-            Central Philippine University - BS Software Engineering <br>
-            >>>[2025-Now] <br>Capiz National High School - Science Technology & Engineering <br>
-            >>>[2019-2025] <br><br> <span style="font-weight: bold">Work History:</span><br> 
-            Miracle Studios - UI/UX Designer <br> >>>[2025-Now]<br><br><span style="font-weight: bold">
-            Languages:</span><br>[TypeScript], [Node.js], [CSS], [Lua], [Python], [Java], [Cpp]<br><br></p>
-        
+                                                                                          </pre>
+          <p style="font-size: 10px; font-family: 'JetBrains Mono', 'Courier New', Courier, monospace; font-weight: 500; color: rgba(200,200,240,1);">-------------------------------------------------------------------------------------------------
+              <br><br> <span style="font-weight: bold">Education:</span> <br> 
+              Central Philippine University - BS Software Engineering <br>
+              >>>[2025-Now] <br>Capiz National High School - Science Technology & Engineering <br>
+              >>>[2019-2025] <br><br> <span style="font-weight: bold">Work History:</span><br> 
+              Miracle Studios - UI/UX Designer <br> >>>[2025-Now]<br><br><span style="font-weight: bold">
+              Languages:</span><br>[TypeScript], [Node.js], [CSS], [Lua], [Python], [Java], [Cpp]<br><br></p>
+          
+        </div>
       </div>
-    </div>
+  </div>
+
+
+  <div id = "projectsPanel" style = "display: none; flex-direction: row; gap: 10px; height:450px; justify-content: center; align-items: center;" >
+    <div class="win7" id = "profilePanel" style = " width: 480px; height: 320px;">
+        <div class="win7-titlebar">
+          <img class="win7-icon" src="Images/ProjectsIcon.png">
+          <span class="win7-title">Projects</span>
+          <div class="win7-buttons">
+            <button class="win7-min"></button>
+            <button class="win7-max"></button>
+            <button class="win7-close"></button>
+          </div>
+        </div>
+        <div class="win7-content" style="background-color: black; display: flex; align-items: center; justify-content: flex-start; height: 310px;">
+          
+        </div>
+      </div>
     
-</div>
+    <img src = "Images\iMacG3Transparent.png" style = "width: 384px; height: 346px; padding-top: 30%;">
+  </div>
 
 
 
   <!-- Lower Buttons -->
-  <div style = "display: flex; flex-direction: horizontal; padding: 10;">
+  <div id = "lowerButtonContainer" style = "display: flex; flex-direction: horizontal;">
     <button id = "profileButton" style="width: 90px; height: 90px; background: none; border: none; padding: 0; cursor: pointer;">
       <div class="float">
         <img src="Images/InfoIcon.png" style="width: 100%; height: 100%; object-fit: contain; ">
@@ -181,5 +200,7 @@ o888o o888o `Y8bod8P' o888o o888o `Y8bod8P'        "888" o888o o888o `Y8bod8P' d
     </a>
   </div>
 
+
+  
 </body>
 </html>
