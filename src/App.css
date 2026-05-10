@@ -1,0 +1,17 @@
+.pagesDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: fixed;
+  top: 60px;
+  width: 100%;
+}
+
+.dockerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 140px;
+  width: 100%;
+}

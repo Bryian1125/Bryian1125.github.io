@@ -1,0 +1,19 @@
+.lowerButtonContainer {
+  display: flex;
+  flex-direction: row
+}
+
+.bubbleButton {
+  width: 90px; 
+  height: 90px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.buttonImage {
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain;
+}

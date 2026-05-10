@@ -1,0 +1,16 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height:450px;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height:450px;
+  justify-content: center;
+}
