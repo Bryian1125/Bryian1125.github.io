@@ -5,28 +5,28 @@ import "./infoCard.css"
 
 export default function InfoCard() {
   return(
-    <div class = "win7 infoTopBar" id = "infoPanel">
-      <div class="win7-titlebar">
-        <img class="win7-icon" src="Images/Info.png"/>
-        <span class="win7-title">Info</span>
-        <div class="win7-buttons">
-          <button class="win7-min"></button>
-          <button class="win7-max"></button>
-          <button class="win7-close"></button>
+    <div className = "win7 infoTopBar" id = "infoPanel">
+      <div className= "win7-titlebar" >
+        <img className= "win7-icon" src={infoIcon}/>
+        <span className= "win7-title" >Info</span>
+        <div className= "win7-buttons" >
+          <button className= "win7-min" ></button>
+          <button className= "win7-max" ></button>
+          <button className= "win7-close" ></button>
         </div>
       </div>
-    <div class="win7-content infoContent">
-      <div class = "contentWrapper">
-        <div class = "editorLines">
+    <div className= "win7-content infoContent">
+      <div className = "contentWrapper">
+        <div className = "editorLines">
           1<br/>2<br/>3<br/>4<br/>5<br/>6
         </div>
-          <p class = "paragraph">
+          <p className = "paragraph">
 	    Engineering student with diverse experience in 
-	    <span class = "highlight"> web development</span>
-	    , <span class = "highlight">GIS systems</span>
-	    , <span class = "highlight">remote sensing</span>
-	    , <span class = "highlight">game development</span>
-	    , and <span class = "highlight">AI</span>.<br/> <br/> 
+	    <span className = "highlight"> web development</span>
+	    , <span className = "highlight">GIS systems</span>
+	    , <span className = "highlight">remote sensing</span>
+	    , <span className = "highlight">game development</span>
+	    , and <span className = "highlight">AI</span>.<br/> <br/> 
             When i'm not coding, im probably playing with   satellite data
 	        </p>
         </div>
