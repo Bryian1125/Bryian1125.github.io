@@ -1,15 +1,19 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
 
 .phonixMain {
   z-index: 3;
   height: 495px;
   background: linear-gradient(#0d0021, #1c0045);
 
+  display: flex;
+  flex-direction: column;
 }
 
 /*Header Classes*/
 .phonixHeader {
-  height: 35px;
+  background: rgba(0,0,0,0.3);
+  height: 45px;
   padding: 10px;
   padding-left: 15px;
   display: flex;
@@ -35,8 +39,9 @@
 
 /*Content Classes*/
 .phonixContent {
+  flex: 1;
   display: flex;
-  flex-direction: horizontal;
+  flex-direction: row;
   justify-content: center;
   gap: 30px;
 }
@@ -73,3 +78,17 @@
 
 }
 
+/*Footer*/
+.phonixFooter {
+  background: rgba(0,0,0,0.3);
+  height: 45px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: horizontal;
+}
+
+.phonixStackText {
+  font-size: 13px; 
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace; 
+  font-weight: 500; 
+}
