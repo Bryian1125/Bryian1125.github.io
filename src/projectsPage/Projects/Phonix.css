@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap);
+
+.phonixMain {
+  z-index: 3;
+  height: 495px;
+  background: linear-gradient(#0d0021, #1c0045);
+
+}
+
+/*Header Classes*/
+.phonixHeader {
+  height: 35px;
+  padding: 10px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: horizontal;
+  gap: 8px;
+}
+
+.phonixHeaderTitleFont {
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: rgba(255,130,0,1);
+ 
+  margin: 0px;
+}
+
+.phonixHeaderSubtextFont {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: rgba(255,255,255,1);
+}
+
+/*Content Classes*/
+.phonixContent {
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: center;
+  gap: 30px;
+}
+
+.phonixDisplay {
+  height: 300px;
+  width: 300px;
+}
+
+.phonixDescription {
+  /*background: rgba(255,255,255,0.05);*/
+  height: 250px;
+  width: 250px;
+  padding: 15px;
+  
+  /*border: 1px solid rgba(255,200,255,0.25);
+  border-radius: 15px;*/
+}
+
+.phonixDescriptionTitle {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: rgba(220,220,220,1);
+}
+
+.phonixDescriptionText {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: rgba(200,200,200,1);
+  text-align: justify;
+  text-align-last: left;
+
+}
+

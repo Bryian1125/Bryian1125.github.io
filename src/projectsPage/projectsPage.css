@@ -1,0 +1,27 @@
+.projectsDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  height:500px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.projectsTabDiv {
+  width: 700px; 
+  height: 450px;
+}
+
+.projectsSideDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  bottom: 40px;
+  width: 300px;
+  height: 500px;
+}
+
+.projectsiMacDiv {
+  width: 350px;
+  height: 300px;
+}
