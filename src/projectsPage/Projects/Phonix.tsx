@@ -1,5 +1,7 @@
 import "./Phonix.css"
 
+import GithubIcon from "../.././assets/github.png"
+import WebsiteIcon from "../.././assets/Website.png"
 import PhonixShowcase from "../.././assets/PhonixShowcase.png"
 
 export default function phonixPage() {
@@ -9,8 +11,21 @@ export default function phonixPage() {
       
       {/*Header*/}
       <div className = "phonixHeader">
+
+        {/*Header Text*/}
         <p className = "phonixHeaderTitleFont"> phonix </p>
 	<p className = "phonixHeaderSubtextFont">learning beyond language barriers</p>
+	
+	{/*Buttons*/}
+	<div className = "phonixHeaderButtonWrapper">
+	  <a href = "https://github.com/dslvd/phonix-dev"  target = "_blank">
+	    <img className = "phonixHeaderButton" src = {GithubIcon}/>
+          </a>
+
+	  <a href = "https://phonix.page/" target = "_blank">
+	    <img className = "phonixHeaderButton" src = {WebsiteIcon}/>
+	  </a>
+	</div>
       </div>
 
       {/*Content*/}
@@ -20,19 +35,19 @@ export default function phonixPage() {
 
 	<div className = "phonixDescription">
 
-
+	 {/*Description Text*/}
 	  <p className = "phonixDescriptionText">
+	    <span className = "phonixDescriptionTitle">
+	      What is Phonix?
+	    </span>
+            <br/>
 
-	  <span className = "phonixDescriptionTitle">
-	  What is Phonix?
-	  </span>
-          <br/>
-	  Phonix is an AI-Based Translation & Language Learning WebApp that we built as a team for our SE-1243 class in my freshman year.
+	    Phonix is an AI-Based Translation & Language Learning WebApp that we built as a team for our SE-1243 class in my freshman year.
+	  </p>
+	  <p className = "phonixDescriptionText">
+            I primarily worked on frontend code, UI design, art design, branding, and refactoring and cleaning up old AI generated code.
 	  </p>
 
-	  <p className = "phonixDescriptionText">
-          I primarily worked on frontend code, UI design, art design, branding, and refactoring and cleaning up old AI generated code.
-	  </p>
 	</div>
       </div>
 

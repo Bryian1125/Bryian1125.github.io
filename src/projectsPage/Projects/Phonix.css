@@ -37,6 +37,19 @@
   color: rgba(255,255,255,1);
 }
 
+.phonixHeaderButtonWrapper {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.phonixHeaderButton {
+  background: rgba(0,0,0,0);
+  height: 40px;
+  width: 40px;
+}
+
 /*Content Classes*/
 .phonixContent {
   flex: 1;
