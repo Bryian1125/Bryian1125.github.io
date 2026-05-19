@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+
+.caresyncMain {
+  z-index: 3;
+  height: 495px;
+  background: #FFFFFF; 
+  display: flex;
+  flex-direction: column;
+}
+
+/*Header Classes*/
+.caresyncHeader {
+  background: rgba(0,0,0,0.1);
+  height: 45px;
+  padding: 10px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: horizontal;
+  gap: 8px;
+}
+
+.caresyncHeaderTitleFont {
+  font-size: 37px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: rgba(5,170,255,1);
+ 
+  margin: 0px;
+}
+
+.caresyncHeaderSubtextFont {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: rgba(255,255,255,1);
+}
+
+.caresyncHeaderButtonWrapper {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.caresyncHeaderButton {
+  background: rgba(0,0,0,0);
+  height: 40px;
+  width: 40px;
+}
+
+/*Content Classes*/
+.caresyncContent {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.caresyncDisplay {
+  height: 300px;
+  width: 300px;
+}
+
+.caresyncDescription {
+  /*background: rgba(255,255,255,0.05);*/
+  height: 250px;
+  width: 250px;
+  padding: 15px;
+  
+  /*border: 1px solid rgba(255,200,255,0.25);
+  border-radius: 15px;*/
+}
+
+.caresyncDescriptionTitle {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: rgba(40,60,80,1);
+}
+
+.caresyncDescriptionText {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: rgba(60,75,90,1);
+  text-align: justify;
+  text-align-last: left;
+
+}
+
+/*Footer*/
+.caresyncFooter {
+  background: rgba(0,0,0,0.6);
+  height: 45px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: horizontal;
+}
+
+.caresyncStackText {
+  font-size: 13px; 
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace; 
+  font-weight: 500; 
+}

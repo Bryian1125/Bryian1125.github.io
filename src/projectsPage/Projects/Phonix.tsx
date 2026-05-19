@@ -42,7 +42,7 @@ export default function phonixPage() {
 	    </span>
             <br/>
 
-	    Phonix is an AI-Based Translation & Language Learning WebApp that we built as a team for our SE-1243 class in my freshman year.
+	    Phonix is an AI-Based Translation & Language Learning WebApp that we built as a team for our SE-1241 Introduction to Engineering Design class in my freshman year.
 	  </p>
 	  <p className = "phonixDescriptionText">
             I primarily worked on frontend code, UI design, art design, branding, and refactoring and cleaning up old AI generated code.
