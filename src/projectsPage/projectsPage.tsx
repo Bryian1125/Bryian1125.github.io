@@ -1,13 +1,7 @@
-import placeholder from ".././assets/cmd.png"
 import iMac from ".././assets/iMacG3Transparent.png"
 
 import "./projectsPage.css"
 import ".././frutigizerAero.css"
-
-
-{/*Switcher*/}
-import Switcher from "./Switcher.tsx"
-
 
 {/*Project Cards*/}
 import PhonixCard from "./Projects/Phonix.tsx"
