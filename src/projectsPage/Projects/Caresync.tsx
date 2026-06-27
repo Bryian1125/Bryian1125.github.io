@@ -17,7 +17,10 @@ export default function CaresyncCard() {
         </div>
       </div>
       <div>
-      {/*Win 7 Content area*/}
+        {/*Win 7 Content area*/}
+        <div className = "caresyncMain">
+           
+        </div>
       </div>
 
     </div>

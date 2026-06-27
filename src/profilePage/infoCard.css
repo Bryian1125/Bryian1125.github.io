@@ -1,21 +1,48 @@
 .infoTopBar {
   width: 450px; 
-  height: 215px;
+  height: 268px;
 }
 
 .infoContent {
   background: linear-gradient(to bottom, rgba(0, 25, 35, 1), rgba(0, 35, 25, 1));
 }
 
+.infoContentHeader {
+  display: flex;
+  flex-direction: horizontal;
+  height: 10px;
+  gap: 5px;
+
+}
+
+.infoContentHeaderTab {
+  height: 1;
+  width: 120px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 15px; 
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500; 
+  background-color: rgba(0,0,0,0.4);
+  color: rgba(160, 190, 180, 1);
+}
+
+.infoContentHeaderTabText {
+  padding: 0px;
+  margin: 0px;
+}
+
 .contentWrapper {
-  display: flex; 
-  flex-direction: row; 
+  display: flex;
+  flex-direction: horizontal;
   gap: 10px;
+  padding-top: 15px;
 }
 
 .editorLines {
   display: flex; 
-  align-items: center; 
+  align-items: flex-start; 
   padding-right: 8px; 
   color: #4a6a7a; 
   font-family: 'JetBrains Mono', monospace; 
@@ -26,10 +53,14 @@
 }
 
 .paragraph {
+  align-self: flex-start; /* FIXED: pins text to top of flex container */
   font-size: 15px; 
   font-family: 'JetBrains Mono', monospace; 
-  font-weight: 500; color: rgba(220,220,200,1); 
+  font-weight: 500; 
+  color: rgba(220,220,200,1);
   text-align: left;
+  line-height: 1.332;
+  margin-top: 0px;
 }
 
 .highlight {

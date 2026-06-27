@@ -1,4 +1,5 @@
 import iMac from ".././assets/iMacG3Transparent.png"
+import kittyGif from ".././assets/sillykitty.gif"
 
 import "./projectsPage.css"
 import ".././frutigizerAero.css"
@@ -26,6 +27,7 @@ export default function ProjectsPage() {
       {/*iMac Display*/}
       <div className = "projectsSideDiv">
         <img className = "projectsiMacDiv" src = {iMac}/>
+        <img className = "projectsiMacScreen" src = {kittyGif}/>
       </div>
     </div>
   )
