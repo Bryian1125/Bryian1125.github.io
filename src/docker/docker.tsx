@@ -19,8 +19,8 @@ export default function Docker() {
       </button>
   
       {/* Projects button */}
-      <button className = "bubbleButton">
-        <img src={ProjectsIcon} className = "buttonImage" onClick={() => navigate('/projects')}/>
+      <button className = "bubbleButton" onClick={() => navigate('/projects')}>
+        <img src={ProjectsIcon} className = "buttonImage"/>
       </button>
   
       {/* Games button */}

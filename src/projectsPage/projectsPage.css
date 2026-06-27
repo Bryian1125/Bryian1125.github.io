@@ -14,11 +14,6 @@
   gap: 10px
 }
 
-.projectsTabDiv {
-  width: 700px; 
-  height: 450px;
-}
-
 .projectsSideDiv {
   display: flex;
   justify-content: center;
@@ -32,3 +27,26 @@
   width: 350px;
   height: 300px;
 }
+
+.projectsGrid {
+  width: 730px;
+  height: 530px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  padding-top:10px;
+  padding-bottom:10px;
+  mask-image: linear-gradient(to bottom, black 95%, transparent 100%);  
+  overflow-x:hidden;
+  overflow-y: scroll;
+}
+
+.projectsGrid::-webkit-scrollbar {
+  display: none;
+}
+
+.projectsGrid > div {
+  width: 350px; 
+  height: 225px;
+}
+
