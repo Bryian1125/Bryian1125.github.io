@@ -1,7 +1,7 @@
 import "./Phonix.css"
 import "../../frutigizerAero.css"
 
-import phonixBackground from "../../assets/phonixBackground.png"
+import phonixBackground from "../../assets/PhonixBackground.png"
 import placeholder from "../.././assets/cmd.png"
 
 export default function PhonixCard() {
