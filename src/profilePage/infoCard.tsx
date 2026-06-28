@@ -18,7 +18,7 @@ export default function InfoCard() {
     <div className= "win7-content infoContent">
 
       <div className = "infoContentHeader">
-        <div className = "infoContentHeaderTab">
+        <div className = "infoContentHeaderSelectedTab">
           <p className = "infoContentHeaderTabText">README.md ×</p>
         </div>
         <div className = "infoContentHeaderTab">
@@ -32,7 +32,7 @@ export default function InfoCard() {
 
       <div className = "contentWrapper">
         <div className = "editorLines">
-          1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9
+          1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>
         </div>
           <p className = "paragraph">
 	          Engineering student with diverse experience in 

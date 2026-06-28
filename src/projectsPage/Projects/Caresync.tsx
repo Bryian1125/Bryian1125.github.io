@@ -1,6 +1,7 @@
 import "./Caresync.css"
 import "../../frutigizerAero.css"
 
+import caresyncBackground from "../../assets/CaresyncBackground.png"
 import placeholder from "../.././assets/cmd.png"
 
 export default function CaresyncCard() {
@@ -19,7 +20,7 @@ export default function CaresyncCard() {
       <div>
         {/*Win 7 Content area*/}
         <div className = "caresyncMain">
-           
+           <img className = "caresyncBackground" src = {caresyncBackground} />
         </div>
       </div>
 

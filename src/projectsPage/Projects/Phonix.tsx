@@ -1,6 +1,7 @@
 import "./Phonix.css"
 import "../../frutigizerAero.css"
 
+import phonixBackground from "../../assets/phonixBackground.png"
 import placeholder from "../.././assets/cmd.png"
 
 export default function PhonixCard() {
@@ -17,7 +18,10 @@ export default function PhonixCard() {
         </div>
       </div>
       <div>
-      {/*Win 7 Content area*/}
+        {/*Win 7 Content area*/}
+        <div className = "caresyncMain">
+           <img className = "caresyncBackground" src = {phonixBackground} />
+        </div>
       </div>
 
     </div>

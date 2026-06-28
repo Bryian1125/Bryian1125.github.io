@@ -29,12 +29,14 @@ o888o o888o \`Y8bod8P' o888o o888o \`Y8bod8P'     "888" o888o o888o \`Y8bod8P' d
           </p>
           <p className = "formattedParagraph" >
           <span style = {{fontWeight: "bold"}}>Education:</span> <br/> 
-          [2025-Now] Central Philippine University - BS Software Engineering<br/>
+          [2025-<span style = {{color: "rgba(215,215,255,0.25)"}}>2029</span>] 
+          Central Philippine University - BS Software Engineering<br/>
           [2019-2025] Capiz National High School - Science, Technology, & Engineering <br/><br/>
 
           <span style = {{fontWeight: "bold"}}>Work History:</span><br/>
+          [2026-Now] Philippine Society of Software Engineers - VP Internal <br/> 
           [2026-Now] SEDS Philippines - Website Management Head<br/>
-          [2025-Now] Miracle Studios - UI/UX Developer<br/><br/>
+          [2025-2026] Miracle Studios - UI/UX Developer<br/><br/>
 
 	        <span style = {{fontWeight: "bold"}}>
             <span>Technologies:</span><br/>
