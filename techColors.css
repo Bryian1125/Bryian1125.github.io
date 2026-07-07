@@ -6,6 +6,10 @@
 	color: #3FA9FF;
 }
 
+.cssText {
+	color: #1572B6;
+}
+
 .javascriptText {
 	color: #FFE55C;
 }
@@ -22,3 +26,30 @@
 	color: #C07BFF;
 }
 
+.reactText {
+	color: #61DAFB;
+}
+
+.tailwindText {
+	color: #38BDF8;
+}
+
+.oauthText {
+	color: #34A853;
+}
+
+.cloudflareD1Text {
+	color: #F48120;
+}
+
+.googleGeminiText {
+	color: #8E75FF;
+}
+
+.googleVisionText {
+	color: #4285F4;
+}
+
+.nextjsText {
+	color: #A1A1AA;
+}
