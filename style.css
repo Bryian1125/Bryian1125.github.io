@@ -16,6 +16,12 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.asciiArt {
+	white-space: pre-wrap;
+	word-break: break-all;
+	line-height: 0.5;
+}
+
 .aboutSection {
 	display: 		flex;
 	flex-direction: 	column;
@@ -58,8 +64,6 @@ body::-webkit-scrollbar {
 
 .projectsContainer {
 	display:		grid;
-	width:			430px;
-	height:			240px;
 	grid-template-columns:  auto auto auto;
 	align-items:		center;
 	justify-content:	center;
@@ -139,3 +143,10 @@ body::-webkit-scrollbar {
 	padding-bottom:		12px;
 }
 
+
+.footer {
+	display: flex;
+	flex-direction: horizontal;
+	height: 150px;
+
+}
