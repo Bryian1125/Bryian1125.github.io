@@ -22,6 +22,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .asciiArt {
   	font-family: "JetBrains Mono", monospace;
 	white-space: pre;
