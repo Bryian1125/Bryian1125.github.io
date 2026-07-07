@@ -17,9 +17,10 @@ body::-webkit-scrollbar {
 }
 
 .asciiArt {
-	white-space: pre-wrap;
-	word-break: break-all;
-	line-height: 0.5;
+	white-space: 		pre;
+	word-break: 		normal;
+	overflow-x: 		auto;
+	line-height: 		0.5;
 }
 
 .aboutSection {
