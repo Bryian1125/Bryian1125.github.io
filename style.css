@@ -17,9 +17,9 @@ body::-webkit-scrollbar {
 }
 
 .asciiArt {
+	font-size:		18px;
 	white-space: 		pre;
 	word-break: 		normal;
-	overflow-x: 		auto;
 	line-height: 		0.5;
 }
 
