@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+
+body {
+	background:		rgba(0,30,25,1);
+
+	font-family:		'JetBrains Mono', 'Courier New', Courier, monospace;
+	color:			rgba(0,230,255,1);
+
+	display: 		flex;
+	flex-direction: 	column;
+	align-items: 		center;
+	justify-content: 	center;
+}
+
+.aboutSection {
+	display: 		flex;
+	flex-direction: 	column;
+	align-items: 		center;
+	justify-content: 	center;
+	text-align:		center;
+}
+
+
+.technologiesSection {
+	display: 		flex;
+	flex-direction: 	column;
+	align-items: 		center;
+	justify-content: 	center;
+}
+.technologiesContainer {
+	display:		grid;
+	width:			550px;
+	grid-template-columns:  auto auto auto auto auto auto;
+	align-items:		center;
+	justify-content:	center;
+	gap:			4px;
+}
+
+.technologiesContainer > div {
+	width:			100px;
+	height:			30px;
+	display: 		flex;
+	align-items:		center;
+	justify-content:	center;
+	background-color:	rgba(0,0,0,0.25);
+}
+
+.projectsSection {
+	display: 		flex;
+	flex-direction: 	column;
+	align-items: 		center;
+	justify-content: 	center;
+}
+
+.projectsContainer {
+	display:		grid;
+	width:			430px;
+	height:			240px;
+	grid-template-columns:  auto auto auto;
+	align-items:		center;
+	justify-content:	center;
+	gap:			10px
+}
+
+.projectsContainer > div {
+	width:			450px;
+	height:			550px;
+	display: 		flex;
+	flex-direction: 	column;
+	align-items:		center;
+	justify-content:	flex-start;
+	border:			1px solid rgba(50,230,255,0.2);
+	background-color:	rgba(0,0,0,0.25);
+	color:			#fff;
+}
+
+.projectsHeader {
+	display: 		flex;
+	flex-direction: 	horizontal;
+	width: 			450px;
+	height: 		45px;
+	box-sizing: 		border-box;
+
+}
+
+.projectsTitle {
+	width: 			300px;
+	padding-left: 		12px;
+	color:			rgba(50,230,255,1)
+}
+
+.projectsSource {
+	width: 			150px;
+	padding-right: 		12px;
+	text-align:		right;
+	color:			rgba(15,255,125,1)
+}
+
+.projectsThumbnail {
+	width:			427px;
+	height:			280px;
+	background-color:	#fff;
+}
+
+.projectsDescription {
+	height:			175px;
+	text-align: 		justify;
+	padding-left: 		12px;
+	padding-right: 		12px;
+	color:			rgba(140,190,200,1);
+
+}
+
+.projectsFooter {
+	display:		grid;
+	height:			50px;
+	width:			426px;
+	grid-template-columns:  auto auto auto auto auto;
+	padding-left:		12px;
+	padding-right:		12px;
+	align-items:		center;
+	justify-content:	left;
+	gap:			4px;
+
+}
+
+.projectsFooter > div {
+	height:			35px;
+}
