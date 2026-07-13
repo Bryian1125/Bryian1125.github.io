@@ -1,7 +1,7 @@
 @font-face {
   	font-family: 		"JetBrains Mono";
 	src: 			url("../fonts/JetBrainsMono-Regular.woff2") format("woff2");
-	font-weight: 		600;
+	font-weight: 		400;
 	font-style: 		normal;
 	font-display: 		swap;
 }
@@ -19,18 +19,18 @@ body {
 }
 
 body::-webkit-scrollbar {
-  display: none;
+  	display: 		none;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: 	none;
 }
 
 .asciiArt {
-  	font-family: "JetBrains Mono", monospace;
-	white-space: pre;
-	line-height: 0.5;
-	font-size: 16px;	
+  	font-family: 		"JetBrains Mono", monospace;
+	white-space: 		pre;
+	line-height: 		0.5;
+	font-size: 		16px;	
 }
  
 .aboutSection {
@@ -156,8 +156,8 @@ a {
 
 
 .footer {
-	display: flex;
-	flex-direction: horizontal;
-	height: 150px;
+	display: 		flex;
+	flex-direction: 	horizontal;
+	height: 		150px;
 
 }
