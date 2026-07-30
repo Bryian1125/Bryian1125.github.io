@@ -7,10 +7,10 @@
 }
 
 body {
-	background:		rgba(0,30,25,1);
+	background:		#16161D;
 
 	font-family:		"JetBrains Mono", monospace;
-	color:			rgba(0,230,255,1);
+	color:			#FFF8E7;
 
 	display: 		flex;
 	flex-direction: 	column;
@@ -89,7 +89,7 @@ a {
 	flex-direction: 	column;
 	align-items:		center;
 	justify-content:	flex-start;
-	border:			1px solid rgba(50,230,255,0.2);
+	border:			1px solid rgba(210,230,255,0.2);
 	background-color:	rgba(0,0,0,0.25);
 	color:			#fff;
 }
@@ -106,7 +106,7 @@ a {
 .projectsTitle {
 	width: 			275px;
 	padding-left: 		12px;
-	color:			rgba(50,230,255,1)
+	color:			rgba(255,250,220,1)
 }
 
 .projectsSource {
@@ -136,7 +136,7 @@ a {
 	text-align: 		justify;
 	padding-left: 		12px;
 	padding-right: 		12px;
-	color:			rgba(140,190,200,1);
+	color:			rgba(200,190,190,1);
 
 }
 
