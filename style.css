@@ -97,7 +97,8 @@ a {
 .projectsHeader {
 	display: 		flex;
 	flex-direction: 	horizontal;
-	width: 			420px;
+	justify-content:	space-between;
+	width: 			400px;
 	height: 		45px;
 	box-sizing: 		border-box;
 
@@ -105,23 +106,28 @@ a {
 
 .projectsTitle {
 	width: 			250px;
-	padding-left: 		12px;
 	color:			rgba(255,250,220,1)
 }
 
-.projectsSource {
-	width: 			150px;
-	padding-right: 		12px;
+.openSource,
+.closedSource {
+	display: 		flex;
 	text-align:		right;
+	width:			auto;
+	color: 			#0C0C0F;
+	font-weight: 		bold;
+	padding-left: 		2px;
+	padding-right: 		2px;
+	padding-bottom: 	1px;
 }
 
 .openSource {
-	color:			rgba(15,255,125,1)
+	background-color:	rgba(15,255,125,1)
 
 }
 
 .closedSource {
-	color:			rgba(255,125,25,1)
+	background-color:	rgba(255,125,25,1)
 
 }
 

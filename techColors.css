@@ -1,63 +1,71 @@
-.pythonText {
-	color: #6BCBFF;
-}
-
-.typescriptText {
-	color: #3FA9FF;
-}
-
-.cssText {
-	color: #1572B6;
-}
-
-.javascriptText {
-	color: #FFE55C;
-}
-
-.cppText {
-	color: #8A7DFF;
-}
-
-.javaText {
-	color: #FF9A3D;
-}
-
-.luaText {
-	color: #C07BFF;
-}
-
-.reactText {
-	color: #61DAFB;
-}
-
-.tailwindText {
-	color: #38BDF8;
-}
-
-.oauthText {
-	color: #34A853;
-}
-
-.cloudflareD1Text {
-	color: #F48120;
-}
-
-.googleGeminiText {
-	color: #8E75FF;
-}
-
-.googleVisionText {
-	color: #4285F4;
-}
-
-.nextjsText {
-	color: #A1A1AA;
-}
-
-.networkingText {
-	color: #00C2A8;
-}
-
+.pythonText,
+.typescriptText,
+.cssText,
+.javascriptText,
+.cppText,
+.javaText,
+.luaText,
+.reactText,
+.tailwindText,
+.oauthText,
+.cloudflareD1Text,
+.googleGeminiText,
+.googleVisionText,
+.nextjsText,
+.networkingText,
 .batchText {
-	color: #C1C1C1;
+	color: 			#0C0C0F;
+	font-weight: 		bold;
+	padding-left: 		2px;
+	padding-right: 		2px;
+	padding-bottom: 	1px;
+}
+
+.pythonText { 
+	background-color: 	#6BCBFF; 
+}
+.typescriptText { 
+	background-color: 	#3FA9FF; 
+}
+.cssText { 
+	background-color: 	#1572B6; 
+}
+.javascriptText { 
+	background-color: 	#FFE55C; 
+}
+.cppText {
+	background-color: 	#8A7DFF; 
+}
+.javaText {
+	background-color: 	#FF9A3D; 
+}
+.luaText { 
+	background-color: 	#C07BFF; 
+}
+.reactText {
+	background-color: 	#61DAFB; 
+}
+.tailwindText {
+	background-color: 	#38BDF8; 
+}
+.oauthText { 
+	background-color: 	#34A853; 
+}
+.cloudflareD1Text { 
+	background-color: 	#F48120; 
+}
+.googleGeminiText { 
+	background-color: 	#8E75FF; 
+}
+.googleVisionText { 
+	background-color: 	#4285F4; 
+}
+.nextjsText { 
+	background-color: 	#A1A1AA; 
+}
+.networkingText { 
+	background-color: 	#00C2A8; 
+}
+.batchText { 
+	background-color: 	#C1C1C1; 
 }
