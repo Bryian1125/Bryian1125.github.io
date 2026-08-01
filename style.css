@@ -83,7 +83,7 @@ a {
 }
 
 .projectsContainer > div {
-	width:			450px;
+	width:			420px;
 	height:			575px;
 	display: 		flex;
 	flex-direction: 	column;
@@ -97,20 +97,20 @@ a {
 .projectsHeader {
 	display: 		flex;
 	flex-direction: 	horizontal;
-	width: 			450px;
+	width: 			420px;
 	height: 		45px;
 	box-sizing: 		border-box;
 
 }
 
 .projectsTitle {
-	width: 			275px;
+	width: 			250px;
 	padding-left: 		12px;
 	color:			rgba(255,250,220,1)
 }
 
 .projectsSource {
-	width: 			175px;
+	width: 			150px;
 	padding-right: 		12px;
 	text-align:		right;
 }
@@ -126,8 +126,8 @@ a {
 }
 
 .projectsThumbnail {
-	width:			427px;
-	height:			280px;
+	width:			402px;
+	height:			263px;
 	background-color:	#fff;
 }
 
@@ -145,7 +145,7 @@ a {
 	flex-direction: 	row;
 	flex-wrap: 		wrap;
 	height: 		45px;
-	width: 			426px;
+	width: 			400px;
 	padding-left: 		12px;
 	padding-right: 		12px;
 	align-content: 		flex-end;
