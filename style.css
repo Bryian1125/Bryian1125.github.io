@@ -111,6 +111,7 @@ a {
 
 .openSource,
 .closedSource,
+.inDevelopment,
 .inactive {
 	display: 		flex;
 	text-align:		right;
@@ -124,17 +125,21 @@ a {
 }
 
 .openSource {
-	background-color:	rgba(15,255,125,1)
+	  background-color:	rgba(15,255,125,1);
 
 }
 
 .closedSource {
-	background-color:	rgba(255,125,25,1)
+	  background-color:	rgba(255,125,25,1);
 
 }
 
+.inDevelopment {
+    background-color: rgba(80,160,255,1);
+}
+
 .inactive {
-   background-color: rgba(40,40,70,1);
+    background-color: rgba(40,40,70,1);
 }
 
 .projectsThumbnail {
