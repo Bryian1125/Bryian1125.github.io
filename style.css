@@ -110,7 +110,8 @@ a {
 }
 
 .openSource,
-.closedSource {
+.closedSource,
+.inactive {
 	display: 		flex;
 	text-align:		right;
 	width:			auto;
@@ -130,6 +131,10 @@ a {
 .closedSource {
 	background-color:	rgba(255,125,25,1)
 
+}
+
+.inactive {
+   background-color: rgba(40,40,70,1);
 }
 
 .projectsThumbnail {
