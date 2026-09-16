@@ -5,9 +5,10 @@ body {
 
 .robloxHeader {
     padding-top: 50px;
+    padding-left: 50px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     line-height: 0px;
 }
