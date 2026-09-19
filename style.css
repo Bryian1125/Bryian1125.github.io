@@ -44,9 +44,9 @@ a {
 
 .asciiBackground {
     color: rgba(255,230,190,0.25);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-size: 20px;
-    line-height: 1;
+    line-height: 0.9;
 }
 
 .asciiArt {
