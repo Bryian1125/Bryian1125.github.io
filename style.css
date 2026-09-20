@@ -28,7 +28,7 @@ a {
 
 .headerSection {
     padding-top:		25%;
-    padding-bottom: 25%;
+    padding-bottom: 21%;
     position: relative;
 }
 
@@ -44,9 +44,9 @@ a {
 
 .asciiBackground {
     color: rgba(255,230,190,0.25);
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     font-size: 20px;
-    line-height: 0.9;
+    line-height: 1;
 }
 
 .asciiArt {
