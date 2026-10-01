@@ -1,5 +1,8 @@
 .pythonText,
 .typescriptText,
+.rustText,
+.zigText,
+.asmText,
 .cssText,
 .javascriptText,
 .cppText,
@@ -26,6 +29,15 @@
 }
 .typescriptText { 
 	background-color: 	#3FA9FF; 
+}
+.rustText { 
+	background-color: 	#DEA584; 
+}
+.zigText { 
+	background-color: 	#F7A41D; 
+}
+.asmText {
+	background-color: 	#9FB2C7; 
 }
 .cssText { 
 	background-color: 	#1572B6; 

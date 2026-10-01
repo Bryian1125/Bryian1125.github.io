@@ -8,8 +8,8 @@
     // ---------- config ----------
     const TICK_MS = 60;          // game speed (lower = faster)
     const FLASH_COLOR = '#ffffff';
-    const PIECE_CHARS = '[]';    // one unit; a cell is 2x2 of these
-    const CELL_W = 4;            // chars per cell horizontally (2 x '[]')
+    const PIECE_TEXT_COLOR = '#16161D'; // matches the page background
+    const CELL_W = 4;            // chars per cell horizontally
     const CELL_H = 2;            // rows per cell vertically
     const PAD = 2;               // blank gap between the '#' frame and the playfield
 
@@ -25,22 +25,22 @@
     // ---------- pieces ----------
     const rotate = m => m[0].map((_, i) => m.map(r => r[i]).reverse());
     const defs = {
-        I: { m: [[1, 1, 1, 1]], c: '#00e5ff' },
-        O: { m: [[1, 1], [1, 1]], c: '#ffe600' },
-        T: { m: [[0, 1, 0], [1, 1, 1]], c: '#c05cff' },
-        S: { m: [[0, 1, 1], [1, 1, 0]], c: '#3cff6b' },
-        Z: { m: [[1, 1, 0], [0, 1, 1]], c: '#ff4d4d' },
-        J: { m: [[1, 0, 0], [1, 1, 1]], c: '#4d8bff' },
-        L: { m: [[0, 0, 1], [1, 1, 1]], c: '#ff9f1c' },
+        I: { m: [[1, 1, 1, 1]], label: 'py',   c: '#7B68EE' },
+        O: { m: [[1, 1], [1, 1]], label: 'ts',   c: '#7FD4FF' },
+        T: { m: [[0, 1, 0], [1, 1, 1]], label: 'js',   c: '#FFE55C' },
+        S: { m: [[0, 1, 1], [1, 1, 0]], label: 'rust', c: '#E5484D' },
+        Z: { m: [[1, 1, 0], [0, 1, 1]], label: 'asm',  c: '#3CCF8E' },
+        J: { m: [[1, 0, 0], [1, 1, 1]], label: 'lua',  c: '#F06FB0' },
+        L: { m: [[0, 0, 1], [1, 1, 1]], label: 'zig',  c: '#F7A41D' },
     };
-    const pieces = Object.values(defs).map(({ m, c }) => {
+    const pieces = Object.values(defs).map(({ m, c, label }) => {
         const rots = [];
         let cur = m;
         for (let i = 0; i < 4; i++) {
             if (!rots.some(r => JSON.stringify(r) === JSON.stringify(cur))) rots.push(cur);
             cur = rotate(cur);
         }
-        return { rots, color: c };
+        return { rots, color: c, label };
     });
 
     // ---------- state ----------
@@ -112,14 +112,14 @@
     function spawn() {
         const piece = pieces[Math.floor(Math.random() * pieces.length)];
         const m = piece.rots[0];
-        cur = { piece, rot: 0, m, x: Math.floor((COLS - m[0].length) / 2), y: -m.length, color: piece.color };
+        cur = { piece, rot: 0, m, x: Math.floor((COLS - m[0].length) / 2), y: -m.length, color: piece.color, label: piece.label };
         if (collides(m, cur.x, cur.y + 1)) { overTicks = 30; return; }
         plan = choosePlan(piece);
     }
 
     function lock() {
         cur.m.forEach((row, r) => row.forEach((v, c) => {
-            if (v && cur.y + r >= 0) grid[cur.y + r][cur.x + c] = cur.color;
+            if (v && cur.y + r >= 0) grid[cur.y + r][cur.x + c] = cur.piece;
         }));
         const full = [];
         grid.forEach((row, i) => { if (row.every(Boolean)) full.push(i); });
@@ -166,23 +166,26 @@
                 color: null,
             })));
 
-        const putCell = (r, c, color) => {
+        const putCell = (r, c, color, label) => {
             if (r < 0 || r >= ROWS) return;
+            // loop the label until it fills the cell edge to edge, both rows,
+            // so a piece reads as a solid block of letters (e.g. 'pypy')
+            const text = label.repeat(Math.ceil(CELL_W / label.length)).slice(0, CELL_W);
             for (let dy = 0; dy < CELL_H; dy++) {
                 const y = offY + r * CELL_H + dy;
                 const x = offX + c * CELL_W;
                 for (let i = 0; i < CELL_W; i++) {
-                    buf[y][x + i] = { ch: PIECE_CHARS[i % PIECE_CHARS.length], color };
+                    buf[y][x + i] = { ch: text[i], color };
                 }
             }
         };
 
-        grid.forEach((row, r) => row.forEach((color, c) => {
-            if (color) putCell(r, c, flashRows && flashRows.includes(r) ? FLASH_COLOR : color);
+        grid.forEach((row, r) => row.forEach((piece, c) => {
+            if (piece) putCell(r, c, flashRows && flashRows.includes(r) ? FLASH_COLOR : piece.color, piece.label);
         }));
         if (cur) {
             cur.m.forEach((row, r) => row.forEach((v, c) => {
-                if (v) putCell(cur.y + r, cur.x + c, cur.color);
+                if (v) putCell(cur.y + r, cur.x + c, cur.color, cur.label);
             }));
         }
 
@@ -194,7 +197,7 @@
                 const color = row[i].color;
                 let s = '';
                 while (i < row.length && row[i].color === color) s += row[i++].ch;
-                html += color ? `<span style="color:${color}">${s}</span>` : s;
+                html += color ? `<span style="color:${PIECE_TEXT_COLOR};background-color:${color}">${s}</span>` : s;
             }
             html += '\n';
         }
