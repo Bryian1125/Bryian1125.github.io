@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: "Bungee";
-    src: url("assets/Bungee-Regular.ttf") format("truetype");
+    src: url("assets/roblox/Bungee-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: "Outfit";
-    src: url("assets/Outfit.ttf") format("truetype");
+    src: url("assets/roblox/Outfit.ttf") format("truetype");
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -51,7 +51,7 @@ body {
     justify-content: center;
     align-self: center;
     font-family: "Bungee";
-    font-size: 70px;
+    font-size: clamp(70px, 9vw, 70px);
     margin: 0;
     line-height: 0.6;
 }
@@ -60,6 +60,8 @@ body {
     justify-content: center;
     align-self: center;
     margin: 0;
+    font-size: clamp(28.5px, 8vw, 28.5px);
+    white-space: nowrap;
 }
 
 
@@ -155,9 +157,40 @@ body {
     padding-top: 3.5%;
     font-family: "Bungee";
     font-size: 45px;
-    line-height: 0.75px;
+    line-height: 0.75;
 }
 
 .galleryDescription {
-    line-height: 0.25px;
+    line-height: 1;
+}
+
+.galleryGrid {
+    --gap: 1rem;
+    --cell-max: 320px;
+
+    padding-top: 4%;
+    display: grid;
+    gap: var(--gap);
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(0, var(--cell-max)));
+}
+
+@media (min-width: 900px) {
+    .galleryGrid {
+        grid-template-columns: repeat(3, minmax(0, var(--cell-max)));
+    }
+}
+
+.galleryGrid > * {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 2px solid rgb(20, 30, 40);
+    border-radius: clamp(8px, 1.5vw, 20px);
+}
+
+.galleryGrid > * img,
+.galleryGrid > * video {
+    width: 103%;
+    height: 103%;
+    object-fit: cover;
 }
