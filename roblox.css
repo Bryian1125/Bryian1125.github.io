@@ -1,22 +1,140 @@
+/* ============================================================
+   Fonts
+   ============================================================ */
+
+@font-face {
+    font-family: "Bungee";
+    src: url("assets/Bungee-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/Outfit.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ============================================================
+   Base
+   ============================================================ */
+
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 400; /* Regular default weight */
-    margin-left: 15%;
-    margin-right: 15%;
+    font-family: "Outfit", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    margin-left: 20%;
+    margin-right: 20%;
     background-color: rgb(255,255,185);
 }
 
+
+/* ============================================================
+   Header
+   ============================================================ */
+
 .robloxHeader {
-    padding-top: 75px;
-    padding-left: 50px;
+    padding-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    line-height: 0px;
+    line-height: normal;
     color: rgb(20,30,40);
+    gap: clamp(2px, 0.5vw, 6px);
 }
 
 .bryianName {
+    justify-content: center;
+    align-self: center;
+    font-family: "Bungee";
     font-size: 70px;
+    margin: 0;
+    line-height: 0.6;
+}
+
+.nameSubtitle {
+    justify-content: center;
+    align-self: center;
+    margin: 0;
+}
+
+
+/* ============================================================
+   Social links
+   ============================================================ */
+
+.socialRow {
+    --pillSize: clamp(22px, 2.8vw, 28px);
+    display: flex;
+    gap: clamp(6px, 0.8vw, 10px);
+    align-self: center;
+    margin-top: clamp(8px, 1vw, 12px);
+}
+
+.socialPill {
+    display: flex;
+    align-items: center;
+    height: var(--pillSize);
+    padding-right: 0;
+    border-radius: 999px;
+    background: rgb(20,30,40);
+    color: rgb(255,255,185);
+    overflow: hidden;
+    cursor: pointer;
+    transition: padding-right 220ms ease-out;
+}
+
+.socialPill:hover {
+    padding-right: 10px;
+}
+
+.socialIcon {
+    width: var(--pillSize);
+    height: var(--pillSize);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialIcon img {
+    width: 80%;
+    height: 80%;
+    display: block;
+    object-fit: contain;
+}
+
+/* Roblox and LinkedIn artwork reads visually heavier, so it is scaled down */
+.socialPill--small .socialIcon img {
+    width: 66%;
+    height: 66%;
+}
+
+/* Optical alignment nudges for individual icons */
+.socialPill--github .socialIcon img {
+    transform: translateY(1px);
+}
+
+.socialPill--website .socialIcon img {
+    transform: translate(0.5px, 0.5px);
+}
+
+.socialLabel {
+    max-width: 0;
+    opacity: 0;
+    margin-left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: clamp(9px, 0.9vw, 12px);
+    transition: max-width 220ms ease-out, opacity 220ms ease-out, margin-left 220ms ease-out;
+}
+
+.socialPill:hover .socialLabel {
+    max-width: 10em;
+    opacity: 1;
+    margin-left: 4px;
 }
