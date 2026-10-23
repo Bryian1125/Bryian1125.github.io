@@ -29,6 +29,7 @@ body {
     margin-left: 20%;
     margin-right: 20%;
     background-color: rgb(255,255,185);
+    color: rgb(20,30,40);
 }
 
 
@@ -43,7 +44,6 @@ body {
     align-items: flex-start;
     width: 100%;
     line-height: normal;
-    color: rgb(20,30,40);
     gap: clamp(2px, 0.5vw, 6px);
 }
 
@@ -137,4 +137,27 @@ body {
     max-width: 10em;
     opacity: 1;
     margin-left: 4px;
+}
+
+.aboutSection {
+    text-align: center;
+    padding-top: 1.5%;
+}
+
+.galleryHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.galleryText {
+    padding-top: 3.5%;
+    font-family: "Bungee";
+    font-size: 45px;
+    line-height: 0.75px;
+}
+
+.galleryDescription {
+    line-height: 0.25px;
 }
