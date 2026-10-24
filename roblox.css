@@ -110,6 +110,10 @@ body {
     object-fit: contain;
 }
 
+a {
+    color: inherit;
+}
+
 /* Roblox and LinkedIn artwork reads visually heavier, so it is scaled down */
 .socialPill--small .socialIcon img {
     width: 66%;
