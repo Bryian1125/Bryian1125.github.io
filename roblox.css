@@ -57,11 +57,11 @@ body {
 }
 
 .nameSubtitle {
-    justify-content: center;
+    text-align: center;
     align-self: center;
-    align-text: justified;
     margin: 0;
-    font-size: clamp(28.5px, 8vw, 28.5px);
+    font-size: clamp(20px, 6vw, 28.5px);
+    max-width: 90%;
     white-space: nowrap;
 }
 
