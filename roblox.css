@@ -131,6 +131,7 @@ a {
 }
 
 .socialLabel {
+    display: inline-block;
     max-width: 0;
     opacity: 0;
     margin-left: 0;
