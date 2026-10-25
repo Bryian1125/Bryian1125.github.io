@@ -13,7 +13,6 @@
     const CELL_H = 2;            // rows per cell vertically
     const PAD = 2;               // blank gap between the '#' frame and the playfield
 
-    
     // ---------- measure the box from the original '#' text ----------
     const lines = el.textContent.split('\n').map(s => s.trim()).filter(s => /^#.*#$/.test(s));
     const W = Math.max(...lines.map(l => l.length));

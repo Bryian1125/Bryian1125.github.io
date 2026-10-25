@@ -26,8 +26,8 @@
 body {
     font-family: "Outfit", 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
     background-color: rgb(255,255,185);
     color: rgb(20,30,40);
 }
@@ -59,6 +59,7 @@ body {
 .nameSubtitle {
     justify-content: center;
     align-self: center;
+    align-text: justified;
     margin: 0;
     font-size: clamp(28.5px, 8vw, 28.5px);
     white-space: nowrap;
@@ -146,50 +147,68 @@ a {
 }
 
 .aboutSection {
-    text-align: center;
+    text-align: justify;
     padding-top: 1.5%;
+    max-width: 70ch;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.galleryHeader {
+.sectionHeader {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.galleryText {
+.sectionText {
     padding-top: 3.5%;
     font-family: "Bungee";
     font-size: 45px;
-    line-height: 0.75;
+    line-height: 0.25;
 }
 
-.galleryDescription {
-    line-height: 1;
+.sectionDescription {
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 1.25;
 }
 
 .galleryGrid {
     --gap: 1rem;
-    --cell-max: 320px;
+    --cell-max: 500px;
 
     padding-top: 4%;
     display: grid;
     gap: var(--gap);
     justify-content: center;
-    grid-template-columns: repeat(2, minmax(0, var(--cell-max)));
+    grid-template-columns: repeat(3, minmax(0, var(--cell-max)));
 }
 
-@media (min-width: 900px) {
+@media (max-width: 1199px) {
     .galleryGrid {
-        grid-template-columns: repeat(3, minmax(0, var(--cell-max)));
+        grid-template-columns: repeat(2, minmax(0, var(--cell-max)));
     }
 }
+
 
 .galleryGrid > * {
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border: 2px solid rgb(20, 30, 40);
     border-radius: clamp(8px, 1.5vw, 20px);
+    cursor: pointer;
+    transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+    position: relative;
+}
+
+.galleryGrid > *:hover {
+    transform: scale(1.06);
+    box-shadow: 0 12px 30px rgba(20, 30, 40, 0.25);
+    z-index: 10;
 }
 
 .galleryGrid > * img,
@@ -198,3 +217,65 @@ a {
     height: 103%;
     object-fit: cover;
 }
+
+.footerSection {
+    padding-bottom: 2.5%
+}
+
+/* ============================================================
+   Lightbox — click a cell to enlarge its image over a dark overlay.
+   Press X / click outside / press Esc to close. Hover is restored on exit.
+   ============================================================ */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(20, 30, 40, 0.85);
+    cursor: default;
+}
+
+.lightbox--open {
+    display: flex;
+}
+
+.lightbox__img {
+    max-width: min(92vw, 90vh);
+    max-height: min(92vh, 88vw);
+    object-fit: contain;
+    border: 3px solid rgb(255, 255, 185);
+    border-radius: 6px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    animation: lightbox-pop 220ms ease-out;
+}
+
+@keyframes lightbox-pop {
+    from { transform: scale(1); opacity: 0; }
+    to   { transform: scale(1.05);    opacity: 1; }
+}
+
+.lightbox__close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgb(255, 255, 185);
+    color: rgb(20, 30, 40);
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 200ms ease-out, background 200ms ease-out;
+}
+
+.lightbox__close:hover {
+    background: rgb(255, 255, 80);
+    transform: scale(1.1);
+}
+
