@@ -93,6 +93,7 @@ body {
 
 .socialPill:hover {
     padding-right: 10px;
+    width: max-content;
 }
 
 .socialIcon {
@@ -127,22 +128,22 @@ a {
 }
 
 .socialPill--website .socialIcon img {
-    transform: translate(0.5px, 0.5px);
+    transform: none;
 }
 
 .socialLabel {
     display: inline-block;
-    width: 0;
+    max-width: 0;
     opacity: 0;
     margin-left: 0;
     overflow: hidden;
     white-space: nowrap;
     font-size: clamp(9px, 0.9vw, 12px);
-    transition: width 220ms ease-out, opacity 220ms ease-out, margin-left 220ms ease-out;
+    transition: max-width 220ms ease-out, opacity 220ms ease-out, margin-left 220ms ease-out;
 }
 
 .socialPill:hover .socialLabel {
-    width: 10em;
+    max-width: 10em;
     opacity: 1;
     margin-left: 4px;
 }
