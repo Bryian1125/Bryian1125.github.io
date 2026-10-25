@@ -156,6 +156,11 @@ a {
     margin-right: auto;
 }
 
+.aboutSection h3 {
+    text-align: justify;
+    margin: 0;
+}
+
 .sectionHeader {
     display: flex;
     flex-direction: column;
