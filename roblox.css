@@ -244,19 +244,41 @@ a {
     display: flex;
 }
 
-.lightbox__img {
+.lightbox__img-wrap {
+    position: relative;
+    display: inline-block;
     max-width: min(92vw, 90vh);
+    max-height: min(92vh, 88vw);
+}
+
+.lightbox__img-wrap .lightbox__img {
+    max-width: 100%;
     max-height: min(92vh, 88vw);
     object-fit: contain;
     border: 3px solid rgb(255, 255, 185);
     border-radius: 6px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-    animation: lightbox-pop 220ms ease-out;
+    animation: lightbox-pop 300ms ease-out;
+    display: block;
+    will-change: transform, opacity;
+}
+
+.lightbox__img-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('./assets/roblox/WATERMARK.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 5;
 }
 
 @keyframes lightbox-pop {
-    from { transform: scale(1); opacity: 0; }
-    to   { transform: scale(1.05);    opacity: 1; }
+    from { transform: scale(0.96); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
 }
 
 .lightbox__close {
@@ -279,5 +301,26 @@ a {
 .lightbox__close:hover {
     background: rgb(255, 255, 80);
     transform: scale(1.1);
+}
+
+/* Watermark overlay on all images */
+.galleryGrid > * {
+    position: relative;
+}
+
+.galleryGrid > *::after,
+.lightbox__img-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('./assets/roblox/WATERMARK.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 5;
+    animation: lightbox-pop 300ms ease-out;
+    will-change: transform, opacity;
 }
 

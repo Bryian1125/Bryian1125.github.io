@@ -41,3 +41,9 @@ document.addEventListener('keydown', (e) => {
         closeLightbox();
     }
 });
+
+document.querySelectorAll('.galleryGrid img, .lightbox__img').forEach(img => {
+    img.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+    });
+});
