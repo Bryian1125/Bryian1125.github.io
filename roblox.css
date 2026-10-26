@@ -51,7 +51,7 @@ body {
     justify-content: center;
     align-self: center;
     font-family: "Bungee";
-    font-size: clamp(70px, 9vw, 70px);
+    font-size: clamp(45px, 8vw, 70px);
     margin: 0;
     line-height: 0.6;
 }
@@ -59,8 +59,9 @@ body {
 .nameSubtitle {
     text-align: center;
     align-self: center;
+    font-family: "Outfit", 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
-    font-size: clamp(20px, 6vw, 28.5px);
+    font-size: clamp(18px, 5vw, 28.5px);
     max-width: 90%;
     white-space: nowrap;
 }
