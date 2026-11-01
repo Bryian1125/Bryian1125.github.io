@@ -38,26 +38,10 @@ a {
     left: 50%;
     transform: translate(-50%, -50%); /* Pulls the elements back to true center */
     font-family: 		"JetBrains Mono", monospace;
-    line-height: 1;
+    line-height: 0.5;
     white-space: 		pre;
 }
 
-.asciiBackground {
-    color: rgba(255,230,190,0.25);
-    letter-spacing: 0px;
-    font-size: 20px;
-    line-height: 1;
-}
-
-.asciiArt {
-    font-size: 16px;
-    line-height: 0.5;
-}
-
-.asciiBackground span {
-    opacity: 0.9;
-    font-weight: bold;
-}
 
 .aboutSection {
     padding-top: 2.5%;
