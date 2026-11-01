@@ -1,194 +1,193 @@
 @font-face {
-  	font-family: 		"JetBrains Mono";
-	src: 			url("../fonts/JetBrainsMono-Regular.woff2") format("woff2");
-	font-weight: 		400;
-	font-style: 		normal;
-	font-display: 		swap;
+  	font-family: 		        "JetBrains Mono";
+	  src: 			              url("../fonts/JetBrainsMono-Regular.woff2") format("woff2");
+	  font-weight: 		        400;
+	  font-style: 		        normal;
+	  font-display: 		      swap;
 }
 
 body {
-	  background:	#000014;
+	  background:	            #000014;
 
-	font-family:		"JetBrains Mono", monospace;
-	color:			#FFF8E7;
+	  font-family:		        "JetBrains Mono", monospace;
+	  color:			            #FFF8E7;
 
-	display: 		flex;
-	flex-direction: 	column;
-	align-items: 		center;
-	justify-content: 	center;
+	  display: 		            flex;
+	  flex-direction: 	      column;
+	  align-items: 		        center;
+	  justify-content: 	      center;
 }
 
 body::-webkit-scrollbar {
-  	display: 		none;
+  	display: 		            none;
 }
 
 a {
-	text-decoration: 	none;
+	  text-decoration: 	      none;
 }
 
 .headerSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top:		5%;
+    display:                flex;
+    flex-direction:         column;
+    align-items:            center;
+    padding-top:		        5%;
 }
 
 .asciiArt {
-    line-height: 1;
-    font-size: 20px;
+    line-height:            1;
+    font-size:              20px;
 }
 
 .asciiText {
-    line-height: 0.5;
-    font-family: 		"JetBrains Mono", monospace;
-    white-space: 		pre;
+    line-height:            0.5;
+    font-family: 		        "JetBrains Mono", monospace;
 }
 
 .aboutSection {
-    padding-top: 2.5%;
-    padding-bottom: 2.5%
-  	display: 		flex;
-	  flex-direction: 	column;
-	  align-items: 		center;
-  	justify-content: 	center;
-	  text-align:		center;
+    padding-top:            2.5%;
+    padding-bottom:         2.5%
+  	display: 		            flex;
+	  flex-direction:         column;
+	  align-items: 		        center;
+  	justify-content: 	      center;
+	  text-align:		          center;
 }
 
 .infoHeader {
-    height: 20px;
-    width: 101.5%;
-    font-size: 20px;
-    padding-bottom: 8px;
-    padding-left: 12px;
-    border-bottom: 1px solid rgba(210,230,255,0.2);
+    height:                 20px;
+    width:                  101.5%;
+    font-size:              20px;
+    padding-bottom:         8px;
+    padding-left:           12px;
+    border-bottom:          1px solid rgba(210,230,255,0.2);
 }
 
 .infoContainer {
-    width: 80vh;
-	  height:			auto;
-    padding: 10px;
-	  display: 		flex;
-	  flex-direction: 	column;
-	  align-items:		center;
-	  justify-content:	flex-start;
-    text-align: justify;
-	  border:			1px solid rgba(210,230,255,0.2);
-	  background-color:	rgba(0,0,0,0.25);
-	  color:			#fff;
+    width:                  80vh;
+	  height:		              auto;
+    padding:                10px;
+	  display: 		            flex;
+	  flex-direction: 	      column;
+	  align-items:	        	center;
+	  justify-content:	      flex-start;
+    text-align:             justify;
+	  border:			            1px solid rgba(210,230,255,0.2);
+	  background-color:	      rgba(0,0,0,0.25);
+	  color:			            #fff;
 
 }
 
 .projectsSection {
-    padding: 30px;
-	display: 		flex;
-	flex-direction: 	column;
-	align-items: 		center;
-	justify-content: 	center;
+    padding:                30px;
+	  display: 		            flex;
+	  flex-direction: 	      column;
+	  align-items: 		        center;
+	  justify-content:  	    center;
 }
 
 .projectsContainer {
-    padding: 30px;
-	display:		grid;
-	grid-template-columns:  auto auto auto;
-	align-items:		center;
-	justify-content:	center;
-	gap:			10px
+    padding:                30px;
+	  display:		            grid;
+	  grid-template-columns:  auto auto auto;
+	  align-items:	        	center;
+	  justify-content:	      center;
+	  gap:			              10px
 }
 
 .projectsContainer > div {
- 	width:			420px;
-	height:			575px;
-	display: 		flex;
-	flex-direction: 	column;
-	align-items:		center;
-	justify-content:	flex-start;
-	border:			1px solid rgba(210,230,255,0.2);
-	background-color:	rgba(0,0,0,0.25);
-	color:			#fff;
+ 	  width:			            420px;
+	  height:			            575px;
+	  display: 		            flex;
+	  flex-direction: 	      column;
+	  align-items:	        	center;
+	  justify-content:	      flex-start;
+	  border:			            1px solid rgba(210,230,255,0.2);
+	  background-color:     	rgba(0,0,0,0.25);
+	  color:			            #fff;
 }
 
 .projectsHeader {
-	display: 		flex;
-	flex-direction: 	horizontal;
-	justify-content:	space-between;
-	width: 			400px;
-	height: 		45px;
-	box-sizing: 		border-box;
+	  display: 		            flex;
+	  flex-direction: 	      horizontal;
+	  justify-content:	      space-between;
+	  width: 			            400px;
+	  height: 		            45px;
+	  box-sizing: 		        border-box;
 
 }
 
 .projectsTitle {
-	width: 			250px;
-	color:			rgba(255,250,220,1)
+	  width: 			            250px;
+	  color:			            rgba(255,250,220,1)
 }
 
 .openSource,
 .closedSource,
 .inDevelopment,
 .inactive {
-	display: 		flex;
-	text-align:		right;
-	width:			auto;
-	height:			18px;
-	color: 			#0C0C0F;
-	font-weight: 		bold;
-	padding-left: 		2px;
-	padding-right: 		2px;
-	padding-bottom: 	1px;
+	  display: 		            flex;
+	  text-align:	          	right;
+	  width:		            	auto;
+	  height:			            18px;
+	  color: 			            #0C0C0F;
+	  font-weight: 		        bold;
+	  padding-left: 		      2px;
+	  padding-right: 		      2px;
+	  padding-bottom: 	      1px;
 }
 
 .openSource {
-	  background-color:	rgba(15,255,125,1);
+	  background-color:	      rgba(15,255,125,1);
 
 }
 
 .closedSource {
-	  background-color:	rgba(255,125,25,1);
+	  background-color:     	rgba(255,125,25,1);
 
 }
 
 .inDevelopment {
-    background-color: rgba(80,190,255,1);
+    background-color:       rgba(80,190,255,1);
 }
 
 .inactive {
-    background-color: rgba(40,40,70,1);
+    background-color:       rgba(40,40,70,1);
 }
 
 .projectsThumbnail {
-	width:			402px;
-	height:			263px;
-	background-color:	#fff;
+	  width:			            402px;
+	  height:			            263px;
+	  background-color:	      #fff;
 }
 
 .projectsDescription {
-	height:			200px;
-	text-align: 		justify;
-	padding-left: 		12px;
-	padding-right: 		12px;
-	color:			rgba(200,190,190,1);
+	  height:		            	200px;
+	  text-align: 		        justify;
+	  padding-left: 	      	12px;
+	  padding-right: 		      12px;
+	  color:			            rgba(200,190,190,1);
 
 }
 
 .projectsFooter {
-	display: 		flex;
-	flex-direction: 	row;
-	flex-wrap: 		wrap;
-	height: 		45px;
-	width: 			400px;
-	padding-left: 		12px;
-	padding-right: 		12px;
-	align-content: 		flex-end;
-	align-items: 		flex-start;
-	justify-content: 	flex-start;
-	gap: 			2px 2px;
-	padding-bottom:		12px;
+	  display: 		            flex;
+	  flex-direction:       	row;
+	  flex-wrap: 		          wrap;
+	  height: 		            45px;
+	  width: 			            400px;
+	  padding-left: 	      	12px;
+	  padding-right: 		      12px;
+	  align-content: 		      flex-end;
+	  align-items: 		        flex-start;
+	  justify-content: 	      flex-start;
+	  gap: 			              2px 2px;
+	  padding-bottom:		      12px;
 }
 
 
 .footer {
-	display: 		flex;
-	flex-direction: 	horizontal;
-	height: 		150px;
+	  display: 		            flex;
+	  flex-direction: 	      horizontal;
+	  height: 		            150px;
 
 }
