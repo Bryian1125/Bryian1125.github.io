@@ -55,31 +55,6 @@ a {
 	  text-align:		center;
 }
 
-
-.technologiesSection {
-	display: 		flex;
-	flex-direction: 	column;
-	align-items: 		center;
-	justify-content: 	center;
-}
-.technologiesContainer {
-	display:		grid;
-	width:			550px;
-	grid-template-columns:  auto auto auto auto auto auto;
-	align-items:		center;
-	justify-content:	center;
-	gap:			4px;
-}
-
-.technologiesContainer > div {
-	width:			100px;
-	height:			30px;
-	display: 		flex;
-	align-items:		center;
-	justify-content:	center;
-	background-color:	rgba(0,0,0,0.25);
-}
-
 .projectsSection {
 	display: 		flex;
 	flex-direction: 	column;
