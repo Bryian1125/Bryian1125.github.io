@@ -31,7 +31,6 @@ a {
     flex-direction: column;
     align-items: center;
     padding-top:		5%;
-    padding-bottom: 5%;
 }
 
 .asciiArt {
@@ -55,6 +54,31 @@ a {
 	  text-align:		center;
 }
 
+.infoHeader {
+    height: 20px;
+    width: 101.5%;
+    font-size: 20px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    border-bottom: 1px solid rgba(210,230,255,0.2);
+}
+
+.infoContainer {
+ 	  width:			auto;
+    max-width: 80vh;
+	  height:			auto;
+    padding: 10px;
+	  display: 		flex;
+	  flex-direction: 	column;
+	  align-items:		center;
+	  justify-content:	flex-start;
+    text-align: justify;
+	  border:			1px solid rgba(210,230,255,0.2);
+	  background-color:	rgba(0,0,0,0.25);
+	  color:			#fff;
+
+}
+
 .projectsSection {
 	display: 		flex;
 	flex-direction: 	column;
@@ -71,7 +95,7 @@ a {
 }
 
 .projectsContainer > div {
-	width:			420px;
+ 	width:			420px;
 	height:			575px;
 	display: 		flex;
 	flex-direction: 	column;
