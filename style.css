@@ -24,6 +24,7 @@ body::-webkit-scrollbar {
 
 a {
 	  text-decoration: 	      none;
+    color:                  inherit;
 }
 
 .headerSection {
@@ -92,6 +93,11 @@ a {
 .linksContainer {
     display:                flex;
     flex-direction:         horizontal;
+    height:                 49px;
+    align-content:          center;
+    align-items:            center;
+    justify-content:        center;
+    gap:                    10px;
 }
 
 .projectsSection {
