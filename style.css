@@ -32,13 +32,13 @@ a {
     position: relative;
 }
 
-.asciiBackground,
 .asciiArt {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Pulls the elements back to true center */
     font-family: 		"JetBrains Mono", monospace;
+    line-height: 1;
     white-space: 		pre;
 }
 
