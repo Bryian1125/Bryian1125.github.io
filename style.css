@@ -36,12 +36,11 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
+    line-height: 0.5;
     transform: translate(-50%, -50%); /* Pulls the elements back to true center */
     font-family: 		"JetBrains Mono", monospace;
-    line-height: 0.5;
     white-space: 		pre;
 }
-
 
 .aboutSection {
     padding-top: 2.5%;
