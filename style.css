@@ -64,8 +64,7 @@ a {
 }
 
 .infoContainer {
- 	  width:			auto;
-    max-width: 80vh;
+    width: 80vh;
 	  height:			auto;
     padding: 10px;
 	  display: 		flex;
