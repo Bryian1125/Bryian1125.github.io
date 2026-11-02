@@ -27,6 +27,17 @@ a {
     color:                  inherit;
 }
 
+.highlightBlue {
+    color:                  rgb(135,155,255);
+    text-shadow:            0px 0px 15px rgba(55,155,255,0.5);
+}
+
+.highlightPink {
+    color:                  rgb(255,125,205);
+    text-shadow:            0px 0px 15px rgba(255,95,205,0.5);
+
+}
+
 .headerSection {
     display:                flex;
     flex-direction:         column;
@@ -72,6 +83,7 @@ a {
     padding-bottom:         8px;
     padding-left:           12px;
     border-bottom:          1px solid rgba(210,230,255,0.2);
+    font-weight:            bold;
 }
 
 .infoContainer {
