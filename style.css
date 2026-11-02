@@ -120,6 +120,10 @@ a {
 	  justify-content:  	    center;
 }
 
+.projectsSectionTitle {
+    text-shadow:            0px 0px 15px rgba(55,155,255,0.25);
+}
+
 .projectsContainer {
     padding:                30px;
 	  display:		            grid;
