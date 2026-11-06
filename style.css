@@ -226,6 +226,24 @@ a {
 }
 
 
+.lightbox {
+    display: flex;
+    flex-direction: column;
+
+    height: 90vh;
+    width: 50vw;
+
+	  align-items:	        	center;
+	  justify-content:	      flex-start;
+
+	  border:			            1px solid rgba(210,230,255,0.2);
+    border-radius:          10px;
+	  background-color:     	rgba(0,0,0,0.25);
+	  color:			            #fff;
+    box-shadow:             0 0 10px rgba(55,155,255,0.075);
+
+}
+
 .footer {
 	  display: 		            flex;
 	  flex-direction: 	      horizontal;
