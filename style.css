@@ -227,7 +227,7 @@ a {
 
 
 .lightbox {
-    display: flex;
+    display: none;
     flex-direction: column;
 
     height: 90vh;
